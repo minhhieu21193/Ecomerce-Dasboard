@@ -1,0 +1,58 @@
+import React from "react";
+import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+const TopTotal = (props) => {
+  const { orders, products } = props;
+  let totalSale = 0;
+  if (orders) {
+    orders.map((order) =>
+      order.isPaid === true ? (totalSale = totalSale + order.totalPrice) : null
+    );
+  }
+  return (
+    <div className="row">
+      <div className="col-lg-4">
+        <div className="card card-body mb-4 shadow-sm">
+          <article className="icontext">
+            <span className="icon icon-sm rounded-circle alert-primary alert">
+              <MonetizationOnIcon className="text-primary" />
+            </span>
+            <div className="text">
+              <h6 className="mb-1">Total Sales</h6>{" "}
+              <span>${totalSale.toFixed(0)}</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div className="col-lg-4">
+        <div className="card card-body mb-4 shadow-sm">
+          <article className="icontext">
+            <span className="icon icon-sm rounded-circle alert-success alert">
+              <ShoppingBagIcon className="text-success" />
+            </span>
+            <div className="text">
+              <h6 className="mb-1">Total Orders</h6>
+              {orders ? <span>{orders.length}</span> : <span>0</span>}
+            </div>
+          </article>
+        </div>
+      </div>
+      <div className="col-lg-4">
+        <div className="card card-body mb-4 shadow-sm">
+          <article className="icontext">
+            <span className="icon icon-sm rounded-circle alert-warning alert">
+              <ShoppingBasketIcon className="text-warning" />
+            </span>
+            <div className="text">
+              <h6 className="mb-1">Total Products</h6>
+              {products ? <span>{products.length}</span> : <span>0</span>}
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TopTotal;
