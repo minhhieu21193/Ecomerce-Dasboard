@@ -79,7 +79,7 @@ const Header = () => {
             <Link className="dropdown-toggle" data-bs-toggle="dropdown" to="#">
               <img
                 className="img-xs rounded-circle"
-                src="/images/favicon.png"
+                src="//bizweb.sapocdn.net/100/438/408/themes/885515/assets/favicon.png?1669283938874"
                 alt="User"
               />
             </Link>

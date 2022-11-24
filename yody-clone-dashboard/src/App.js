@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/productScreen";
-import CategoriesScreen from "./screens/CategoriesScreen";
 import OrderScreen from "./screens/OrderScreen";
 import OrderDetailScreen from "./screens/OrderDetailScreen";
 import AddProduct from "./screens/AddProduct";
@@ -54,14 +53,7 @@ function App() {
               </PrivateRouter>
             }
           />
-          <Route
-            path="/category"
-            element={
-              <PrivateRouter>
-                <CategoriesScreen />
-              </PrivateRouter>
-            }
-          />
+
           <Route
             path="/orders"
             element={

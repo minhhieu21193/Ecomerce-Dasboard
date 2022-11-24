@@ -63,17 +63,7 @@ const Sidebar = () => {
                 <span className="text">Add product</span>
               </NavLink>
             </li>
-            <li className="menu-item">
-              <NavLink
-                className={(isActive) =>
-                  isActive.isActive ? "menu-link active" : "menu-link"
-                }
-                to="/category"
-              >
-                <FormatListBulletedIcon className="icon" />
-                <span className="text">Categories</span>
-              </NavLink>
-            </li>
+
             <li className="menu-item">
               <NavLink
                 className={(isActive) =>
