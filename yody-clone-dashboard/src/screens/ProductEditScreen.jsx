@@ -5,8 +5,9 @@ import EditProductMain from "../components/products/EditproductMain";
 import { useParams } from "react-router-dom";
 
 const ProductEditScreen = () => {
-  const id = useParams();
-  const productId = id;
+  const queryPrams = useParams();
+  const productId = queryPrams.id;
+  console.log(productId);
   return (
     <>
       <Sidebar />
